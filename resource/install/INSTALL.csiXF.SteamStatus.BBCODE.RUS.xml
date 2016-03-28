@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="csiXF_bbCode_E9341966" title="(CSI/XF/BBCODE) Steam: Status" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="csiXF_bbCode_E9341966_aTitle" version_id="1" version_string="1.0.0"><![CDATA[Статус Steam]]></phrase>
+    <phrase title="csiXF_bbCode_E9341966_addFriend" version_id="1" version_string="1.0.0"><![CDATA[Добавить в друзья]]></phrase>
+    <phrase title="custom_bb_code_steam_status_title" version_id="1" version_string="1.0.0"><![CDATA[Steam: Статус]]></phrase>
+    <phrase title="custom_bb_code_steam_status_desc" version_id="1" version_string="1.0.0"><![CDATA[Steam: Статус]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_bbCode_E9341966_tag_steam_status" version_id="1" version_string="1.0.0"><![CDATA[<xen:require css="csiXF_bbCode_E9341966.css" />
+  <a title="{xen:phrase csiXF_bbCode_E9341966_aTitle}: {xen:raw $content}" class="csiXF_bbCode_E9341966 bbCodeSteamStatus externalLink Tooltip" href="http://steamcommunity.com/id/{xen:raw $query}/" rel="nofollow">
+    <img class="csiXF_bbCode_E9341966 bbCodeSteamStatus" src="http://steamsignature.com/status/russian/{xen:raw $query}.png" alt="{xen:phrase csiXF_bbCode_E9341966_aTitle}" />
+  </a><a title="{xen:phrase csiXF_bbCode_E9341966_addFriend}" class="csiXF_bbCode_E9341966 bbCodeSteamStatus bbCodeSteamStatusAddFriend externalLink Tooltip" href="steam://friends/add/{xen:raw $query}" rel="nofollow"><img src="http://steamsignature.com/AddFriend.png" alt="" /></a>]]></template>
+    <template title="csiXF_bbCode_E9341966.css" version_id="1" version_string="1.0.0"><![CDATA[a.bbCodeSteamStatus {
+  display: inline-block;
+}]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes>
+    <bb_code bb_code_id="steam_status" bb_code_mode="callback" has_option="no" callback_class="CSI\BbCodeSteamStatus\BbCode\Formatter\Base" callback_method="getBbCodeSteamStatus" option_regex="" trim_lines_after="0" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[[STEAM_STATUS]KitsuneSolar[/STEAM_STATUS]]]></example>
+    </bb_code>
+  </bb_codes>
+</addon>
